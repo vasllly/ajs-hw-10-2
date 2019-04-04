@@ -48,3 +48,17 @@ test('validate is " Vasia"', () => {
   const expected = false;
   expect(received).toBe(expected);
 });
+
+test('validate is "Vasya-s"', () => {
+  const validator = new Validator();
+  const received = validator.validateUsername('Vasya-s');
+  const expected = true;
+  expect(received).toBe(expected);
+});
+
+test('validate is "-V---a-"', () => {
+  const validator = new Validator();
+  const received = validator.validateUsername('-V---a-');
+  const expected = true;
+  expect(received).toBe(expected);
+});

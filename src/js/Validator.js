@@ -1,6 +1,6 @@
 export default class Validator {
   constructor() {
-    this.trueRules = [/^[а-яёa-z ]+$/i];
+    this.trueRules = [/^[а-яёa-z -]+$/i];
     this.falseRules = [/ {2,}/, /^ /, / $/];
     this.rules = [...this.trueRules, ...this.falseRules];
   }

@@ -62,3 +62,10 @@ test('validate is "-V---a-"', () => {
   const expected = true;
   expect(received).toBe(expected);
 });
+
+test('validate is "-V---a-"', () => {
+  const validator = new Validator();
+  const received = validator.validateUsername(' -V--#-a-');
+  const expected = false;
+  expect(received).toBe(expected);
+});
